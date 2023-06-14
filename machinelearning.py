@@ -52,7 +52,9 @@ if uploaded_files:
     plt.scatter(df[x], df[y])
     plt.xlabel('x', fontsize=18)
     plt.ylabel('y', fontsize=18)
-    st.pyplot(fig)
+    execute_simplot = st.button("単変量プロット描画")
+    if execute_simplot:
+        st.pyplot(fig)
 
     st.markdown('### 可視化 ペアプロット')
     item = st.multiselect('可視化するカラム', df_columns)
